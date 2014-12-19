@@ -1,6 +1,6 @@
 public class Solution {
-    public int trap(int[] A) {
-        if (A.length == 0)
+	public int trap(int[] A) {
+		if (A.length == 0)
 			return 0;
 
 		int max = 0;
@@ -19,5 +19,5 @@ public class Solution {
 			ret += container[i] - A[i] > 0 ? container[i] - A[i] : 0;
 		}
 		return ret;
-    }
+	}
 }

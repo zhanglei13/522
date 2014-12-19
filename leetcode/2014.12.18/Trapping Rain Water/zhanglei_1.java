@@ -1,6 +1,6 @@
 public class Solution {
-    public int trap(int[] A) {
-        if (A.length == 0)
+	public int trap(int[] A) {
+		if (A.length == 0)
 			return 0;
 
 		int[] maxLeft = new int[A.length];
@@ -25,5 +25,5 @@ public class Solution {
 				ret += trap;
 		}
 		return ret;
-    }
+	}
 }

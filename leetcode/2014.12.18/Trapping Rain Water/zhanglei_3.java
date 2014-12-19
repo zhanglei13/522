@@ -1,6 +1,6 @@
 public class Solution {
-    public int trap(int[] A) {
-        if (A.length == 0)
+	public int trap(int[] A) {
+		if (A.length == 0)
 			return 0;
 
 		int curMaxHeight = 0;
@@ -27,5 +27,5 @@ public class Solution {
 				curMaxHeight = A[i];
 		}
 		return ret;
-    }
+	}
 }
