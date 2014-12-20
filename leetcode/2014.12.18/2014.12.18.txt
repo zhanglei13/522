@@ -1,0 +1,6 @@
+1. Two Sum 
+https://oj.leetcode.com/problems/two-sum/ 
+2. Search in Rotated Sorted Array 
+https://oj.leetcode.com/problems/search-in-rotated-sorted-array/ 
+3. Trapping Rain Water 
+https://oj.leetcode.com/problems/trapping-rain-water/
