@@ -1,3 +1,6 @@
+'''
+Cannot find reduplicated 3-tuple 
+'''
 class Solution:
     def TwoSum(self,num,target):
         mmap={}
@@ -11,9 +14,7 @@ class Solution:
     def ThreeSum(self,num):
         if len(num)==0:
             return []
-        tuple3=[]
-        result=[]
-        targetList=[]
+        tuple3,result,targetList=[],[],[]
         for i in range(len(num)):
             if num[0] in targetList:
                 continue 
