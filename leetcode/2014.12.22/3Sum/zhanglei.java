@@ -15,10 +15,8 @@ public class Solution {
 				while (j < k) {
 					int sum = num[i] + num[j] + num[k];
 					if (sum == 0) {
-						List<Integer> turple = new ArrayList<Integer>();
-						turple.add(num[i]);
-						turple.add(num[j]);
-						turple.add(num[k]);
+						List<Integer> turple = Arrays.asList(num[i], num[j],
+								num[k]);
 						result.add(turple);
 						j++;
 						k--;
