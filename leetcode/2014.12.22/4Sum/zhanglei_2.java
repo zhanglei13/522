@@ -29,9 +29,8 @@ public class Solution {
 				if (index.containsKey(key)) {
 					for (int[] pairs : index.get(key)) {
 						if (i > pairs[1]) {
-							List<Integer> res = Arrays.asList(new Integer[] {
-									num[pairs[0]], num[pairs[1]], num[i],
-									num[j] });
+							List<Integer> res = Arrays.asList(
+									num[pairs[0]], num[pairs[1]], num[i], num[j]);
 
 							if (!uniqueRes.contains(res)) {
 								uniqueRes.add(res);

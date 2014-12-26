@@ -28,9 +28,9 @@ public class Solution {
 				for (int[] first : index.get(key)) {
 					for (int[] second : index.get(target - key)) {
 						if (second[0] > first[1]) {
-							List<Integer> res = Arrays.asList(new Integer[] {
+							List<Integer> res = Arrays.asList(
 									num[first[0]], num[first[1]],
-									num[second[0]], num[second[1]] });
+									num[second[0]], num[second[1]]);
 
 							if (!uniqueRes.contains(res)) {
 								uniqueRes.add(res);

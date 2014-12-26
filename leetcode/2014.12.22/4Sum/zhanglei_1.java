@@ -17,8 +17,8 @@ public class Solution {
 				while (start < end) {
 					int sum = num[i] + num[j] + num[start] + num[end];
 					if (sum == target) {
-						List<Integer> turple = Arrays.asList(new Integer[] {
-								num[i], num[j], num[start], num[end] });
+						List<Integer> turple = Arrays.asList(
+								num[i], num[j], num[start], num[end]);
 
 						if (!set.contains(turple)) {
 							set.add(turple);
