@@ -2,7 +2,7 @@ public class Solution {
 	public List<List<Integer>> threeSum(int[] num) {
 		List<List<Integer>> result = new ArrayList<List<Integer>>();
 
-		if (num.length < 3 || num == null) {
+		if (num.length < 3) {
 			return result;
 		}
 
