@@ -1,0 +1,2 @@
+http://git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository
+https://www.atlassian.com/git/tutorials/setting-up-a-repository/git-config
