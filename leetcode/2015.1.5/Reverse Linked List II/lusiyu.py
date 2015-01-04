@@ -6,27 +6,30 @@ class ListNode:
 
 class Solution:
     # @param head, a ListNode
+    # @param m, an integer
+    # @param n, an integer
     # @return a ListNode
-    def deleteDuplicates(self, head):
-        p, pre, i = head, head, 0
-        while p:
-            if p.next and p.next.val == p.val:
-                q = p.next
-                while q and q.val == p.val:
-                    q = q.next
-                p = q
-            else:
-                if i == 0:
-                    head, pre = p, p
-                else:
-                    pre.next, pre = p, p
-                p = p.next
-                i += 1
-        if i:
-            pre.next = p
+    def reverseBetween(self, head, m, n):
+        if m == n:
             return head
+        q, p, start, end =head, head, m, n - m
+        while start > 1:
+            q, p = p, p.next
+            start -= 1
+        pre, l = p, p.next
+        while end > 0:
+            nex = l.next
+            l.next = pre
+            pre = l
+            l = nex
+            end -= 1
+        if m == 1:
+            p.next = l
+            return pre
         else:
-            return None
+            q.next, p.next = pre, l
+            return head
+
 def creatList(a):
     l = ListNode(a[0])
     p = l
@@ -41,7 +44,7 @@ def printList(l):
         print l.val
         l = l.next
 
-a = [1,2,2]
+a, m, n = [1,2,3,4,5], 2, 4
 head = creatList(a)
 solution = Solution()
-print printList(solution.deleteDuplicates(head))
+print printList(solution.reverseBetween(head, m, n))
