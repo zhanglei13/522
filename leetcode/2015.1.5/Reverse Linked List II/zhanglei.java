@@ -1,20 +1,20 @@
 public class Solution {
     public ListNode reverseBetween(ListNode head, int m, int n) {
-        ListNode first = new ListNode(0);
-        ListNode result = first;
-        first.next = head;
+        ListNode current = new ListNode(0);
+        ListNode result = current;
+        current.next = head;
         ListNode p = head, q;
 
         for (int i = 1; i < m; i++) {
-            first = first.next;
+            current = current.next;
             p = p.next;
         }
 
         for (int i = 0; i < n - m; i++) {
             q = p.next;
             p.next = q.next;
-            q.next = first.next;
-            first.next = q;
+            q.next = current.next;
+            current.next = q;
         }
 
         return result.next;
