@@ -17,7 +17,6 @@ public class HeapSort implements Solution {
         return num;
     }
 
-
     private void createMaxHeap(int[] num) {
         for (int i = num.length / 2 - 1; i >= 0; i--)
             maxHeapify(num, num.length, i);
@@ -28,13 +27,10 @@ public class HeapSort implements Solution {
         int right = left + 1;
         int largest = index;
 
-        if (left < heapSize && num[index] < num[left]) {
+        if (left < heapSize && num[index] < num[left])
             largest = left;
-        }
-
-        if (right < heapSize && num[largest] < num[right]) {
+        if (right < heapSize && num[largest] < num[right])
             largest = right;
-        }
 
         if (largest != index) {
             swap(num, index, largest);
