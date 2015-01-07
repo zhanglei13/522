@@ -10,23 +10,26 @@ package sort;
 public class SelectSort implements Solution {
     @Override
     public int[] sort(int[] num) {
-        int min, index;
+        int index = 0;
 
         for (int i = 0; i < num.length; i++) {
-            min = num[i];
             index = i;
 
             for (int j = i + 1; j < num.length; j++) {
-                if (num[j] < min) {
-                    min = num[j];
+                if (num[j] < num[index])
                     index = j;
-                }
             }
 
-            num[index] = num[i];
-            num[i] = min;
+            if (index != i)
+                swap(num, i, index);
         }
 
         return num;
+    }
+
+    private void swap(int[] num, int i, int j) {
+        int temp = num[i];
+        num[i] = num[j];
+        num[j] = temp;
     }
 }
