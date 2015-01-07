@@ -20,14 +20,18 @@ public class BubbleSort implements Solution {
 
             for (int start = 1; start < end; start++) {
                 if (num[start - 1] > num[start]) {
-                    int temp = num[start - 1];
-                    num[start - 1] = num[start];
-                    num[start] = temp;
+                    swap(num, start - 1, start);
                     flag = start;
                 }
             }
         }
 
         return num;
+    }
+
+    private void swap(int[] num, int i, int j) {
+        int temp = num[i];
+        num[i] = num[j];
+        num[j] = temp;
     }
 }
