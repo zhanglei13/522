@@ -10,15 +10,14 @@ package sort;
 public class SelectSort implements Solution {
     @Override
     public int[] sort(int[] num) {
-        int index;
+        int index = 0;
 
         for (int i = 0; i < num.length; i++) {
             index = i;
 
             for (int j = i + 1; j < num.length; j++) {
-                if (num[j] < num[index]) {
+                if (num[j] < num[index])
                     index = j;
-                }
             }
 
             if (index != i)
