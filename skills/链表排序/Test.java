@@ -2,10 +2,10 @@ package sort;
 
 public class Test {
     public static void main(String[] args) {
-        int[] num = {0, 1, 1, 2, 1, 1};
-        //   int[] num = {1, 49, 38, 65, 97, 76, 1, 13, 27, 49, 78, 34, 12, 64, 5, 4, 62, 99, 98, 54, 56, 17, 18, 23, 34, 15, 35, 25, 53, 51};
+        //  int[] num = {};
+        int[] num = {1, 49, 38, 65, 97, 76, 1, 13, 27, 49, 78, 34, 12, 64, 5, 4, 62, 99, 98, 54, 56, 17, 18, 23, 34, 15, 35, 25, 53, 51};
         ListNode head = createList(num);
-        Solution solution = new InsertSort();
+        Solution solution = new MergeSort();
         printList(solution.sort(head));
     }
 

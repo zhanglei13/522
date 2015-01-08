@@ -3,13 +3,42 @@ package sort;
 /**
  * Created by zhanglei on 2015/1/7.
  * 快速排序
- * 基本思想：选择一个基准元素，通过一趟扫描，将待排序列分成两部分，一部分比基准元素小，一部分大于等于基准元素
- * 此时基准元素在其排好序后的正确位置，然后再用同样的方法递归地排序划分的两部分。
+ * 交换节点的val值，平均时间复杂度O（nlogn）,不考虑递归栈空间的话空间复杂度是O（1）
  */
 
 public class QuickSort implements Solution {
     @Override
     public ListNode sort(ListNode head) {
-        return null;
+        quickSort(head, null);
+        return head;
+    }
+
+    private void quickSort(ListNode head, ListNode tail) {
+        if (head != tail) {
+            ListNode mid = partition(head, tail);
+            quickSort(head, mid);
+            quickSort(mid.next, tail);
+        }
+    }
+
+    private ListNode partition(ListNode low, ListNode high) {
+        int pivot = low.val;
+        ListNode ptr = low;
+
+        for (ListNode current = low.next; current != high; current = current.next) {
+            if (current.val < pivot) {
+                ptr = ptr.next;
+                swap(current, ptr);
+            }
+        }
+        swap(ptr, low);
+
+        return ptr;
+    }
+
+    private void swap(ListNode p, ListNode q) {
+        int temp = p.val;
+        p.val = q.val;
+        q.val = temp;
     }
 }

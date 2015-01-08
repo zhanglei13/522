@@ -15,7 +15,7 @@ public class BubbleSort implements Solution {
             ListNode end = flag;
             flag = null;
             for (ListNode current = head; current.next != null; current = current.next) {
-                if (current != head && current == end)
+                if (current == end && current != head)
                     break;
 
                 if (current.val > current.next.val) {
